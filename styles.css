@@ -1,4 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root{
-    --primary-color:black;
+    --primary-color:white;
+    --secondary-color:yellow;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(to left, #fce043 0%, #fb7ba2 74%);
+    margin: 0;
+}
+
+h1{
+    margin-top: 3rem;
+    color:var(--primary-color);
+    text-align: center;
+    text-shadow: 1px 1px var(--secondary-color);
+}
+
+::placeholder{
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    border:1px solid yellow;
+    padding: 1rem;
+    width:60vw;
+    text-align: center;
+    margin: 0 auto;
+    color:var(--primary-color)
+}
+
+.dob{
+    text-shadow: 1px 1px var(--secondary-color);
+    font-size: larger;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lucky-num{
+    text-shadow: 1px 1px var(--secondary-color);
+    font-size: larger;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+input{
+    width:100%;
+    max-width:250px;
+    border-radius: .2rem;
+    display: block;
+    margin:1rem auto;
+    border: 1px solid var(--secondary-color);
+    font-family: 'Roboto', sans-serif;
+    padding: .5rem;
+    background: transparent;
+}
+
+input:hover{
+    background-color:var(--primary-color);
+    border: 1px solid var(--secondary-color);
+}
+.btn-check-number{
+    border-radius: .2rem;
+    width: 140px;
+    max-width: 100%;
+    font-family: 'Roboto', sans-serif;
+    min-height: 2.5rem;
+    margin-top: 1rem;
+    font-size: large;
+    text-shadow: 1px 1px var(--secondary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-check-number:hover{
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px var(--secondary-color);
+    color: black;
+}
+
+.message{
+    width:50%;
+    margin: 2rem auto;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: center;
+    background-color: #ffdddd;
+    border-left: 6px solid var(--secondary-color);
+}
+
+.privacy-alert{
+    width:60%;
+    margin: 0 auto;
+    padding: .7rem;
+    background-color: red;
+}
+
+.hide-privacy-msg{
+    float:right;
+}
+
+.hide-privacy-msg:hover{
+    color:black;
+}
+
+ul{
+    margin-top: 5rem;
+}
+
+.socials{
+    list-style: none;
+    display: inline;
+    padding: 1rem;
+}
