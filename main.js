@@ -2,6 +2,14 @@ var dateOfbirth = document.querySelector("#date-of-birth")
 var luckyNumber = document.querySelector("#lucky-number")
 var btnCheckNumber = document.querySelector(".btn-check-number")
 var message = document.querySelector(".message")
+var privacyAlert = document.querySelector(".privacy-alert")
+var hidePrivacyMsg = document.querySelector(".hide-privacy-msg")
+
+
+
+function privacyTextHandler(){
+    privacyAlert.style.display = "none"
+}
 
 function sumDOB(){
     var dob = dateOfbirth.value.replaceAll("-","")
@@ -14,7 +22,6 @@ function sumDOB(){
 
 function isLuckyDob(sum){
     if(sum % luckyNumber.value ===0){
-        console.log("hi")
         message.innerText = "Yay! Your birthday is lucky 🙂"
     }else{
         message.innerText = "Alas! Your birthday is not lucky 😌"
@@ -22,8 +29,15 @@ function isLuckyDob(sum){
 }
 
 function checkNumberEventHandler(){
-    const sum = sumDOB()
-    isLuckyDob(sum)
+    if(dateOfbirth.value === ""|| luckyNumber.value === ""){
+        message.innerText = "Please Enter both the fields"
+    }
+    else{
+        const sum = sumDOB()
+        isLuckyDob(sum)
+    }
+     
 }
 
 btnCheckNumber.addEventListener("click",checkNumberEventHandler)
+hidePrivacyMsg.addEventListener("click",privacyTextHandler)
