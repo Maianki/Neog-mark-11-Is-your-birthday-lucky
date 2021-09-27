@@ -116,4 +116,5 @@ ul{
     list-style: none;
     display: inline;
     padding: 1rem;
+    padding-inline-start: 0px;
 }

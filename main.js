@@ -31,8 +31,9 @@ function isLuckyDob(sum){
 function checkNumberEventHandler(){
     if(dateOfbirth.value === ""|| luckyNumber.value === ""){
         message.innerText = "Please Enter both the fields"
-    }
-    else{
+    }else if(luckyNumber.value < 0){
+        message.innerText = "Please enter a lucky number greater than zero."
+    }else{
         const sum = sumDOB()
         isLuckyDob(sum)
     }
